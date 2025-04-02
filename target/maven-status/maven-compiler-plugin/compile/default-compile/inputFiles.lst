@@ -1,0 +1,7 @@
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/repository/PatronRepository.java
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/controller/PatronController.java
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/LibraryApplication.java
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/model/Patron.java
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/model/Book.java
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/repository/BookRepository.java
+/home/moisescortes/Documents/Java Projects/Crear_RESTful_API_Java/LibraryApi/LibraryManagement/src/main/java/com/example/library/controller/BookController.java
