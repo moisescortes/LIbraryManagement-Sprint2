@@ -1,45 +1,48 @@
 package com.example.library.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
+import java.sql.Timestamp;
 
 @Entity
-@Table(name = "books") // This specifies the table name in the database
+@Table(name = "books")
 public class Book {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Automatically generate IDs
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull // This field cannot be null
-    @Size(max = 255) // Maximum length for the title
-    @Column(nullable = false) // This column cannot be null in the database
+    @NotNull
+    @Size(max = 255)
+    @Column(nullable = false)
     private String title;
 
-    @NotNull // This field cannot be null
-    @Size(max = 255) // Maximum length for the author name
-    @Column(nullable = false) // This column cannot be null in the database
+    @NotNull
+    @Size(max = 255)
+    @Column(nullable = false)
     private String author;
 
-    @NotNull // This field cannot be null
-    @Size(min = 10, max = 20) // ISBN length validation
-    @Column(unique = true, nullable = false) // This column must be unique and cannot be null
+    @NotNull
+    @Size(min = 10, max = 20)
+    @Column(unique = true, nullable = false)
     private String isbn;
 
-    @NotNull // This field cannot be null
-    @Min(1000) // Minimum value for the publication year
+    @NotNull
+    @Min(1000)
     private Integer publicationYear;
 
-    @Size(max = 100) // Maximum length for the genre
+    @Size(max = 100)
     private String genre;
 
-    @Min(1) // Minimum value for the number of pages
+    @Min(1)
     private Integer pages;
 
+    @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
+    private Timestamp createdAt;
 
-    // Getters and Setters
+    public Book() {}
+
+    // Getters y setters
+
     public Long getId() {
         return id;
     }
@@ -96,5 +99,7 @@ public class Book {
         this.pages = pages;
     }
 
-    // createdAt does not need a setter because it's auto-generated
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
 }
